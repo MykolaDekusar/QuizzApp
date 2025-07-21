@@ -5,8 +5,8 @@ string question3 = "If you close your eyes what do you see?";
 string question4 = "What is the fastest running animal on earth?";
 int answer1 = 12;
 int answer2 = 5;
-string answer3 = "Nothing";
-string answer4 = "Ghepard";
+string answer3 = "nothing";
+string answer4 = "ghepard";
 
 //Let's set the global score
 
@@ -34,11 +34,11 @@ if(startGame == 'n')
         score++;
     Console.WriteLine("\n" + question3 + "\n");
     userStringAnswer = Console.ReadLine();
-    if (userStringAnswer == answer3)
+    if (userStringAnswer.Trim().ToLower() == answer3)
         score++;
     Console.WriteLine("\n" + question4 + "\n");
     userStringAnswer = Console.ReadLine();
-    if (userStringAnswer == answer4)
+    if (userStringAnswer.Trim().ToLower() == answer4)
         score++;
     //Answer based on score
     switch (score)
