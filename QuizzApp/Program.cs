@@ -1,6 +1,6 @@
 ﻿//Objective: create questions with relative answers, if the user answers correctly add a point, show the final result
-string question1 = "How many months are is a year?";
-string question2 = "How many fingers are in a hand?";
+string question1 = "How many months are in a year?";
+string question2 = "How many fingers are on one hand?";
 string question3 = "If you close your eyes what do you see?";
 string question4 = "What is the fastest running animal on earth?";
 int answer1 = 12;
@@ -14,10 +14,10 @@ int score = 0;
 
 char startGame;
 
-Console.WriteLine("Let's play a quitz game, if you're ready type \'y', if you're not type \'n'\n");
-startGame = Console.ReadKey().KeyChar;
+Console.WriteLine("Let's play a quiz game, if you're ready type \'y', if you're not type \'n'\n");
+startGame = char.ToLower(Console.ReadKey().KeyChar);
 
-if(startGame == 'n')
+if (startGame == 'n')
 {
     Console.WriteLine("\n\nWell let's play when you'll be ready!!!");
 } else if(startGame == 'y')
