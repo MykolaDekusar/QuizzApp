@@ -23,8 +23,27 @@ if(startGame == 'n')
 } else if(startGame == 'y')
 {
     Console.WriteLine("\nAllright, let's begin!");
+    Console.WriteLine("\n" + question1);
+    int userNumberAnswer = int.Parse(Console.ReadLine());
+    string userStringAnswer;
+    if (userNumberAnswer == answer1)
+        score++;
+    Console.WriteLine("\n" + question2);
+    userNumberAnswer = int.Parse(Console.ReadLine());
+    if (userNumberAnswer == answer2)
+        score++;
+    Console.WriteLine("\n" + question3);
+    userStringAnswer = Console.ReadLine();
+    if (userStringAnswer == answer3)
+        score++;
+    Console.WriteLine("\n" + question4);
+    userStringAnswer = Console.ReadLine();
+    if (userStringAnswer == answer4)
+        score++;
 
 } else
-    Console.WriteLine("\nSorry wrong input type \'y', if you're ready or \'n' if you're not");
+    Console.WriteLine("/nSorry wrong input type \'y', if you're ready or \'n' if you're not");
+
+Console.WriteLine("\n" + score);
 
 Console.ReadKey();
