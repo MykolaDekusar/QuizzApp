@@ -24,12 +24,26 @@ if(startGame == 'n')
 {
     Console.WriteLine("\n\nAllright, let's begin!");
     Console.WriteLine("\n" + question1 + "\n");
-    int userNumberAnswer = int.Parse(Console.ReadLine());
-    string userStringAnswer;
+    int userNumberAnswer;
+    string userStringAnswer = Console.ReadLine();
+
+    while(!int.TryParse(userStringAnswer, out userNumberAnswer))
+    {
+        Console.WriteLine("\nEnter a number\n");
+        userStringAnswer = Console.ReadLine();
+    }
+        
     if (userNumberAnswer == answer1)
         score++;
     Console.WriteLine("\n" + question2 + "\n");
-    userNumberAnswer = int.Parse(Console.ReadLine());
+
+    userStringAnswer = Console.ReadLine();
+    while (!int.TryParse(userStringAnswer, out userNumberAnswer))
+    {
+        Console.WriteLine("\nEnter a number\n");
+        userStringAnswer = Console.ReadLine();
+    }
+        
     if (userNumberAnswer == answer2)
         score++;
     Console.WriteLine("\n" + question3 + "\n");
